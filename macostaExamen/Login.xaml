@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="macostaExamen.Login">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="BackgroundColor" Value="Beige"/>
+
+            </Style>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        
+        <StackLayout >
+            <Label Text="Examen Parcial 1" HorizontalTextAlignment="Center" FontSize="18"  TextColor="Black"/>
+            <Image  WidthRequest="100" HeightRequest="100" Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
+            
+            
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+            </Grid>
+            
+            <Label Text="USUARIO"  Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtUsuario"  Placeholder="Ingrese usuario" Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="CONTRASEÑA"  Grid.Row="1" Grid.Column="0" />
+            <Entry x:Name="txtContraseña"  Placeholder="Ingrese contraseña"  IsPassword="True" Grid.Row="1" Grid.Column="1"/>
+            
+            <Button x:Name="btn_Inicio" Text="Inicio" Clicked="btn_Inicio_Clicked" Grid.Row="2" Grid.Column="0"/>
+
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
